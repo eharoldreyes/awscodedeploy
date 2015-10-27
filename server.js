@@ -29,7 +29,6 @@ var AWS 			= require('aws-sdk');
 var app             = express();
 var router          = routes(express.Router(), logger);
 
-AWS.config.update({accessKeyId: config.aws.access_key_id, secretAccessKey: config.aws.secret_access_key});
 app.use(cors("*"));
 app.use(morgan("dev", {immediate : true}));
 app.use(response_time());

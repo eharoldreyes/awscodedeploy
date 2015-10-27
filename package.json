@@ -1,0 +1,64 @@
+{
+  "name": "aotg-backend",
+  "version": "1.0.0",
+  "description": "Backend server application of Ahead of the Game",
+  "main": "server.js",
+  "author": "Edgar Harold Reyes",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "nodejs server.js && forever start ./webhooked/webhooked.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://mayoflute@bitbucket.org/joindup/aotg-backend.git"
+  },
+  "dependencies": {
+    "async": "^1.3.0",
+    "aws-sdk": "^2.1.46",
+    "body-parser": "~1.13.1",
+    "connect-multiparty": "~1.2.5",
+    "cookie-parser": "~1.3.5",
+    "ejs": "^2.3.4",
+    "email-templates": "^2.0.1",
+    "expect.js": "^0.3.1",
+    "express": "~4.13.0",
+    "express-session": "~1.11.3",
+    "express-subdomain": "^1.0.3",
+    "imagemagick": "~0.1.3",
+    "method-override": "~2.3.3",
+    "mocha": "^2.2.5",
+    "moment": "^2.10.6",
+    "morgan": "~1.6.0",
+    "multer": "^1.0.3",
+    "mysql": "~2.7.0",
+    "mysql-wrap": "^0.4.0",
+    "netmask": "^1.0.5",
+    "nodemailer": "^1.5.0",
+    "nodemailer-ses-transport": "^1.3.0",
+    "passport": "^0.3.0",
+    "passport-facebook": "^2.0.0",
+    "q": "~1.4.1",
+    "qs": "^5.1.0",
+    "response-time": "~2.3.1",
+    "s3-uploader": "^1.0.0",
+    "socket.io": "~1.3.5",
+    "socket.io-client": "^1.3.6",
+    "streaming-s3": "^0.4.0",
+    "string_decoder": "^0.10.31",
+    "superagent": "^1.4.0",
+    "superagent-no-cache": "^0.1.0",
+    "superagent-prefix": "0.0.2",
+    "underscore": "~1.8.3",
+    "urldecode": "^1.0.1",
+    "winston": "~1.0.0"
+  },
+  "apidoc": {
+    "title": "Ahead of the Game API",
+    "url": "http://52.64.247.156:4001"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  }
+}

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd /home/ubuntu/server/
+sudo npm install
+sudo start webserver
+
 # Here is where you'd want to start your http daemon. For example:
 #service httpd start
 #exit $?

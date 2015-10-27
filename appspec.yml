@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/server/
+hooks:
+  ApplicationStop:
+    - location: deployment-scripts/deregister_from_elb.sh
+    - location: deployment-scripts/stop_server.sh
+      runas: ubuntu
+  ApplicationStart:
+    - location: deployment-scripts/start_server.sh
+    - location: deployment-scripts/register_with_elb.sh
+      runas: ubuntu

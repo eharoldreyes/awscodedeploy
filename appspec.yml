@@ -1,14 +1,20 @@
-version: 0.0
+version: 1.0
 os: linux
 files:
   - source: /
     destination: /home/ubuntu/server/
 hooks:
+  BeforeInstall:
+    - location: deployment-scripts/update_server.sh
+      timeout: 300
+      runas: ubuntu
   ApplicationStop:
     - location: deployment-scripts/deregister_from_elb.sh
     - location: deployment-scripts/stop_server.sh
+      timeout: 300
       runas: ubuntu
   ApplicationStart:
     - location: deployment-scripts/start_server.sh
     - location: deployment-scripts/register_with_elb.sh
+      timeout: 300
       runas: ubuntu
